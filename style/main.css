@@ -1,0 +1,432 @@
+/**
+ * =============================================================================
+ * This is the file where all your styling should go in.
+ * Instead of modifying the styles found in the monogatari.css file or others,
+ * you should overwrite those styles in this file.
+ *
+ * The CSS selectors shown are not an extensive list but they are the most
+ * common you might want to change. To find what other elements are available,
+ * you can take a look at the monogatari.css file or use your browser's dev
+ * tools to inspect the elements.
+ * =============================================================================
+**/
+
+/**
+ * ===========================
+ * General Styling
+ * ===========================
+**/
+
+/* General Style */
+body {
+
+}
+
+/* Simple Button styles*/
+button {
+
+}
+
+/* Simple Button Style on Hover */
+button:hover {
+
+}
+
+/* General Styling for Menu Screens */
+[data-screen] {
+
+}
+
+/**
+ * ===========================
+ * Main Menu Styling
+ * ===========================
+**/
+
+/* 1. Aseguramos que el fondo se vea correctamente */
+[data-screen="main"] {
+		background-image: url('../assets/scenes/main_theme.jpg'); 
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+}
+
+.contenedor-del-menu {
+	display: flex;
+	flex-direction: column; /* Pone los botones uno arriba del otro */
+	justify-content: center; /* Centra verticalmente */
+	align-items: center;    /* Centra horizontalmente */
+	height: 100vh;          /* Que ocupe todo el alto de la pantalla */
+	gap: 10px;              /* Espacio entre botones */
+}
+
+/* 3. Estilizamos los botones (Estilo OMORI) */
+[data-screen="main"] button {
+		background-color: rgba(0, 0, 0, 0.7) !important; 
+		border: 3px solid white !important; 
+		font-family: 'CutePixel', sans-serif !important; 
+		font-size: 1.5rem !important; /* Un pelín más chicos para que no tapen tanto */
+		color: white !important;
+		margin-bottom: 10px !important; 
+		padding: 8px 20px !important;
+		width: 220px; /* Ancho ajustado */
+		text-align: center;
+		transition: all 0.2s ease;
+		cursor: pointer;
+		text-transform: uppercase; /* Opcional: para que se vean más como OMORI */
+}
+
+/* 4. Efecto al pasar el mouse (Hover) */
+[data-screen="main"] button:hover {
+		background-color: white !important;
+		color: black !important;
+		transform: scale(1.05); /* Se agranda un poquito */
+}
+
+/**
+ * ===========================
+ * Save and Load Menus Styling
+ * ===========================
+**/
+
+/* Slots Style */
+[data-component="save-slot"] figure {
+
+}
+
+/* Slot's Image Style */
+[data-component="save-slot"] img {
+
+}
+
+/* Slots Title Style */
+[data-component="save-slot"] figcaption {
+
+}
+
+/* Slots Delete Button Style */
+[data-component="save-slot"] button {
+
+}
+
+/**
+ * ===========================
+ * Game Elements Styling
+ * ===========================
+**/
+
+/* FORZAMOS LAS DOS FILAS */
+[data-component="choice-container"] {
+		display: flex !important;
+		flex-direction: row !important; /* Fuerza que vayan de lado */
+		flex-wrap: wrap !important;     /* Permite que bajen a la segunda fila */
+		justify-content: center !important;
+		align-items: center !important;
+
+		/* Control de espacio */
+		gap: 10px !important;           /* Juntalos más entre sí */
+		width: 500px !important;        /* Ancho fijo para obligarlos a amontonarse en dos filas */
+
+		position: absolute !important;
+		left: 50% !important;
+		top: 35% !important;            /* Subimos para que no choquen con el textbox */
+		transform: translate(-50%, -50%) !important;
+}
+
+/* ESTILO DE LOS BOTONES PARA QUE QUEPAN DE A DOS */
+[data-component="choice-container"] button {
+		/* El truco: Cada botón ocupa casi la mitad del contenedor */
+		width: calc(50% - 10px) !important; 
+		min-width: 180px !important;
+
+		background-color: rgba(0, 0, 0, 0.85) !important;
+		border: 2px solid white !important;
+		font-family: 'CutePixel', sans-serif !important;
+		font-size: 1.1rem !important;
+		padding: 12px 5px !important;
+		margin: 0 !important;           /* Quitamos márgenes que los separen */
+		border-radius: 5px !important;
+}
+
+/* Text Box styling */
+[data-component="text-box"] {
+
+}
+
+/* Character Name Style */
+[data-ui="who"] {
+
+}
+
+/* Style for Centered Text */
+[data-component="centered-dialog"] {
+
+}
+
+/* Character Images Styles */
+[data-screen="game"] [data-character] {
+
+}
+
+/* Other Images Styles */
+[data-screen="game"] [data-image] {
+
+}
+
+/**
+ * ===========================
+ * Quick Menu Styling
+ * ===========================
+**/
+
+/* These styles are applied to the Mobile version of the Quick Menu */
+
+/* Quick Menu Style */
+[data-component="quick-menu"] {
+
+}
+
+/* Quick Menu Buttons Style */
+[data-component="quick-menu"] span {
+
+}
+
+/* Quick Menu Buttons Style on Hover */
+[data-component="quick-menu"] span:hover {
+
+}
+
+/* Quick Menu Buttons Icon Style */
+[data-component="quick-menu"] > span > .fa {
+
+}
+
+/**
+ * ===========================
+ * Range Styling
+ * ===========================
+**/
+
+/* Use the background property to set a color for these */
+input[type=range]:focus::-webkit-slider-runnable-track {
+
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+
+}
+
+input[type=range]:focus::-ms-fill-upper {
+
+}
+
+input[type=range]:focus::-ms-fill-lower {
+
+}
+
+input[type=range]::-moz-range-track {
+
+}
+
+input[type=range]::-ms-fill-lower {
+
+}
+
+input[type=range]::-ms-fill-upper {
+
+}
+
+/** Medium Screens, Phablets (601px) **/
+@media screen and (min-width: 37.56255em) {
+	/* Styles for the desktop version of the Quick Menu */
+
+	/* Quick Menu Style */
+	[data-component="quick-menu"] {
+
+	}
+
+	/* Quick Menu Buttons Style */
+	[data-component="quick-menu"] span {
+
+	}
+
+	/* Quick Menu Buttons Style on Hover */
+	[data-component="quick-menu"] span:hover {
+
+	}
+}
+
+/** Medium Devices, Tablets (992px)**/
+@media screen and (min-width: 62em) {
+
+}
+
+/** HD Screen, Large Devices, Wide Screens, Desktop (1200px) **/
+@media screen and (min-width: 75em) {
+
+}
+
+/** Full HD Screen, Large Devices, Wide Screens, Large Desktops (1920px) **/
+@media screen and (min-width: 120em) {
+
+}
+
+/** Retina Screen , Large Devices, Wide Screens(2560px) **/
+@media screen and (min-width: 160em) {
+
+}
+
+/** 4k Screens, Large Devices, Wide Screens (3840px) **/
+@media screen and (min-width: 240em) {
+
+}
+
+/** 5k Screens, Large Devices, Wide Screens (5000px) **/
+@media screen and (min-width: 312.5em) {
+
+}
+
+/** 8k Screens, Large Devices, Wide Screens (8000px) **/
+@media screen and (min-width: 500em) {
+
+}
+
+/* 1. Fuente (Ruta verificada en tu carpeta style/fonts/) */
+@font-face {
+	font-family: 'CutePixel';
+	src: url('./fonts/CutePixel.ttf') format('truetype');
+}
+
+/* FUENTE SOLO PARA EL NOMBRE (Arriba) */
+[data-ui="who"] {
+	font-family: 'CutePixel', sans-serif !important;
+	font-size: 1.5em; /* Puedes hacerlo un poco más grande si quieres */
+}
+
+/* FUENTE PARA EL DIÁLOGO (Abajo) */
+.text--main {
+	/* Aquí pon la fuente que quieras para el resto, por ejemplo una estándar o la que prefieras */
+	font-family: 'Arial', sans-serif !important; 
+	font-size: 1.2em;
+}
+
+/* 2. Configuración de Retratos Estilo "Andy and Leyley" */
+
+/* Forzamos a que los sprites de los personajes se comporten como Side Images */
+/* Estilo para los personajes en pantalla */
+[data-screen="game"] [data-character] {
+	position: fixed !important;
+	bottom: 0;             /* Pegados al borde inferior */
+	height: 55vh !important; /* Antes tenías 95vh. Prueba con 75 o 70 para que sean más pequeños */
+	width: auto;           /* Mantiene la proporción */
+	z-index: 5;
+}
+
+/* Nunu siempre a la izquierda */
+[data-character="n"] {
+	left: 0 !important;
+	right: auto !important;
+}
+
+/* Gigi siempre a la derecha */
+[data-character="g"] {
+	right: 0 !important;
+	left: auto !important;
+}
+
+/* ===========================
+	 Game Elements Styling
+	 ===========================
+*/
+
+/* 1. CONFIGURACIÓN PRINCIPAL DEL CONTENEDOR DEL TEXTO */
+[data-component="text-box"] {
+		/* Fondo negro traslúcido para todo el ancho del cuadro (como querías) */
+		background-color: rgba(0, 0, 0, 0.6) !important; 
+
+		/* Tu imagen decorativa */
+		background-image: url('../assets/ui/textbox.png') !important;
+		background-size: 100% 100% !important; /* Estira el PNG */
+		background-repeat: no-repeat !important;
+		background-position: center !important;
+
+		/* Posicionamiento y dimensiones (ajustado para que se vea igual que en tu captura) */
+		width: 60% !important; 
+		min-height: 180px !important; /* Un poco más alto para acomodar el padding */
+		left: 50% !important;
+		transform: translateX(-50%);
+		bottom: 20px !important;
+
+		/* ¡IMPORTANTE! Espaciado interno para que el texto NO toque los bordes dorados */
+		padding: 35px 70px !important;
+
+		/* Quitamos cualquier borde del contenedor principal */
+		border: none !important; 
+		border-radius: 5px;
+		z-index: 100;
+}
+
+/* 2. LIMPIEZA AGRESIVA: Quitamos el cuadro negro interno que rodea el texto y nombre */
+/* Esto ataca los contenedores internos que Monogatari crea por defecto */
+[data-component="text-box"] [data-ui="who"],
+[data-component="text-box"] .text--main,
+[data-component="text-box"] > div {
+		background-color: transparent !important; /* Hacemos transparente el fondo interno */
+		border: none !important;                 /* Quitamos CUALQUIER borde interno */
+		border-style: none !important;
+		box-shadow: none !important;             /* Quitamos sombras internas */
+		padding: 0 !important;                   /* Reiniciamos el padding interno */
+		margin: 0 !important;
+}
+
+/* 3. ESTILIZAMOS SOLO EL NOMBRE (GIGI) */
+[data-ui="who"] {
+		font-family: 'CutePixel', sans-serif !important;
+		font-size: 1.8rem !important;
+		display: block !important;
+		margin-bottom: 10px !important; /* Espacio antes del diálogo */
+}
+
+/* 4. ESTILIZAMOS SOLO EL DIÁLOGO ("...") */
+.text--main {
+		font-family: 'Arial', sans-serif !important; 
+		font-size: 1.4rem !important;
+		color: white !important;
+		line-height: 1.9 !important;
+}
+
+
+
+/* Ajuste adicional para que el nombre del personaje no flote raro */
+[data-ui="who"] {
+		background-color: rgba(0, 0, 0, 0.8) !important;
+		padding: 5px 15px !important;
+		border-radius: 5px 5px 0 0;
+		margin-bottom: 5px;
+}
+/* EL ÚLTIMO RECURSO: Fondo que cubre TODO el juego */
+[data-screen="game"] [data-component="choice-container"]::after {
+		content: "";
+		position: fixed !important;
+
+		/* Forzamos coordenadas absolutas respecto a la pantalla */
+		top: -50vh !important;
+		left: -50vw !important;
+		width: 200vw !important;
+		height: 200vh !important;
+
+		/* Oscurecimiento y/o Blur */
+		background-color: rgba(0, 0, 0, 0.3) !important;
+	  backdrop-filter: blur(5px) !important;
+	  -webkit-backdrop-filter: blur(8px) !important;
+
+		z-index: -1 !important;
+		pointer-events: none !important;
+}
+
+/* Aseguramos que el contenedor de opciones no corte el fondo */
+[data-component="choice-container"] {
+		overflow: visible !important;
+		z-index: 110 !important;
+}
+
