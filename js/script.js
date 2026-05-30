@@ -58,8 +58,17 @@ monogatari.characters ({
 		}
 	},
 	'x': {
-		name: 'Npc',
-		color: '#000000',
+		name: '¿?',
+		color: '#FFFFFF',
+		directory: 'portraits',
+		sprites: {
+
+		}
+	},
+
+	'l': {
+		name: 'Leyla',
+		color: '#FFFFFF',
 		directory: 'portraits',
 		sprites: {
 
@@ -748,7 +757,8 @@ monogatari.script ({
 		'stop music menu_theme with fadeOut 2s',
 		'stop music Scene001',
 		'x ¡Hola!, ¿cómo te llamás? Recién te ví en pasillo...',
-
+		'n Manuel.... ¿Qué hay de vos?',
+		'l Leyla, de hecho...',
 ],
 
 	'Pasillo': [
