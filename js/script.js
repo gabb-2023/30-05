@@ -100,6 +100,14 @@ monogatari.characters ({
 
 		}
 	}
+	'ls': {
+		name: 'Lucas',
+		color: '#FFFFFF',
+		directory: 'portraits',
+		sprites: {
+
+		}
+	}
 });
 
 monogatari.script ({
@@ -815,6 +823,7 @@ monogatari.script ({
 		'stop music menu_theme with fadeOut 2s',
 		'stop music Scene001',
 		'show scene Pasillos_01',
+                'show character n neutral_blush',
 		'x Hola... te ví allá.',
 		'*Señala el pasillo anterior*.',
 		'Y... me preguntaba si podía hablarte...',
@@ -866,17 +875,17 @@ monogatari.script ({
 		'*Una persona te mira, como si quisiera hablarte.*',
 		{
 			'Choice': {
-				'claro': {
-					'Text': 'Por supuesto',
-					'Do': 'jump x_y_Lev'
+				'mirar': {
+					'Text': 'Esperar que pase algo',
+					'Do': 'jump Esperar'
 				},
-				'no': {
-					'Text': 'Estoy ocupado',
-					'Do': 'jump Lev_ocupado'
+				'hablar': {
+					'Text': 'Hablarle',
+					'Do': 'jump Hablar'
 				},
-				'broma': {
-					'Text': '¿Preguntábas?',
-					'Do': 'jump Lev_sarcastico'
+				'cruzar': {
+					'Text': 'Ir al pasillo',
+					'Do': 'jump Pasar'
 				}
 			}
 		}
@@ -885,6 +894,7 @@ monogatari.script ({
 	'x_y_Lev': [
 		'stop music menu_theme with fadeOut 2s',
 		'stop music Scene001',
+                'show character n neutral',
 		'play sound beep2',
 		'show character n speaking',
 		'n Ah, sí, hablemos.',
@@ -911,7 +921,19 @@ monogatari.script ({
 		'n Ah, perdón, ya estoy ocupado.',
 		'show character n neutral',
 		'x Ouh, está bien, entiendo...',
-		'*La persona te cede el paso*'
+		'*La persona te cede el paso*',
+		{
+			'Choice': {
+				'nuevolugar': {
+					'Text': 'Cruzar',
+					'Do': 'jump nuevolugar'
+				},
+				'aula': {
+					'Text': 'Volver al aula',
+					'Do': 'jump aula'
+				}
+			}
+		}
 ],
 	'Lev_sarcastico': [
 		'stop music menu_theme with fadeOut 2s',
@@ -943,6 +965,11 @@ monogatari.script ({
 		'n Por supuesto',
 		'show character n neutral_blush',
 		'x Gracias, que bueno esto...',
+		'ls Oh, me llamo Lucas, ¿y vos?',
+		'play sound beep2',
+		'show character n speaking',
+		'n Ah, Manuel.',
+		'show character n neutral_blush',
 ],
 
 	'no_x': [
@@ -950,9 +977,25 @@ monogatari.script ({
 		'stop music Scene001',
 		'play sound beep2',
 		'show character n speaking',
-		'n Mmmmh, no... nos conocemos bien',
+		'n Mmmmh, no... nos conocemos bien.',
 		'show character n neutral',
-		'x Ah, eh... sí tenés la razón',
+		'x Ah, eh... sí tenés la razón, perdón, JAJ.',
+		'play sound beep2',
+		'show character n speaking',
+		'n Sí, mmh.',
+		'show character n neutral',		
+{
+			'Choice': {
+				'nuevolugar': {
+					'Text': 'Seguir el camino',
+					'Do': 'jump nuevolugar'
+				},
+				'aula': {
+					'Text': 'Volver al aula',
+					'Do': 'jump aula'
+				}
+			}
+		}
 ],
 
 });
