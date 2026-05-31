@@ -150,9 +150,9 @@ monogatari.script ({
 
 	'EscenaLugar': [
 		'stop music menu_theme with fadeOut 2s',
-		'show character g neutral',
+		'show character g neutral with fadeIn',
 		'play sound beep2',
-		'show character n speaking',
+		'show character n speaking with fadeIn',
 		'n ¿Qué es este lugar?',
 		'show character n neutral_blush',
 		'show character n speaking',
@@ -478,9 +478,9 @@ monogatari.script ({
 		'hide character g fadeOut',
 		'hide character n fadeOut',
 		'...',
-		'show scene Pasillos_01',
-		'show character g smile',
-		'show character n speaking',
+		'show scene Pasillos_01 with fadeIn',
+		'show character g smile with fadeIn',
+		'show character n speaking with fadeIn',
 		'play sound beep2',
 		'n ¿Qué hacemos acá?',
 		'show character n neutral_blush',
@@ -516,7 +516,7 @@ monogatari.script ({
 	],
 	'EscenaSpoiler': [
 		'stop music menu_theme with fadeOut 2s',
-		'show character g smile',
+		'show character g smile with fadeIn',
 		'show character n neutral_blush',
 		'show character g speaking',
 		'play sound beep1',
@@ -531,7 +531,7 @@ monogatari.script ({
 
 	'EscenaNoSpoiler':[
 		'stop music menu_theme with fadeOut 2s',
-		'show character g smile',
+		'show character g smile with fadeIn',
 		'show character n neutral_blush',
 		'show character n speaking',
 		'play sound beep2',
@@ -547,9 +547,9 @@ monogatari.script ({
 	'Escena001': [
 		'stop music menu_theme with fadeOut 2s',
 		'stop music 000 fadeOut 2s',
-		'play music Scene001',
+		'play music Scene001 with fadeIn',
 		'hide character n',
-		'show character g neutral_sinN',
+		'show character g neutral_sinN with fadeIn',
                 'show character g speaking_sinN',
 		'play sound beep1',
 		'g y por eso yo siempre... ',
@@ -620,8 +620,8 @@ monogatari.script ({
 		'show character g emocionado',
 		'g ¡Va!',
 		'show character g smile',
-		'show scene Pasillos_02',
-		'show character n smile',
+		'show scene Pasillos_02 with fadeIn',
+		'show character n smile with fadeIn',
 		'play sound beep1',
 		'show character g speaking',
 		'g Mmmh, ¿qué fecha estábamos?',
@@ -839,19 +839,82 @@ monogatari.script ({
 	'Sentado_01': [
 		'stop music menu_theme with fadeOut 2s',
 		'stop music Scene001',
-		'show scene Aula_sentado',
+		'show scene Aula_sentado with fadeIn',
 		'l ¿De dónde venís?',
 		'play sound beep2',
 		'n Emh, Asunción, CNAE ¿y vos, siempre estudiaste aquí?',
 		'l ¡Síp! Desde primer grado.',
+		'play sound beep2',
+		'n Oh, woah, ¿conocés a todos, verdad?',
+		'l ¡Siiiíp!',
+		'play sound beep2',
+		'n Ah, que bueno.',
+		'l ¡Gracias!',
+		'l Por cierto, me gusta mucho tu estilo',
+		'play sound beep2',
+		'n Ayy, muchas gracias.',
+		'l JAJJA, no es nada',
 ],
 
 	'Pasillo_02': [
 		'stop music menu_theme with fadeOut 2s',
 		'stop music Scene001',
-		'show scene Pasillos_02',
+		'show scene Pasillos_02 with fadeIn',
 		'x ...',
 		'*Una persona te mira, como si quisiera hablarte.*',
+],
+
+	'x_y_Lev': [
+		'stop music menu_theme with fadeOut 2s',
+		'stop music Scene001',
+		'play sound beep2',
+		'show character n speaking',
+		'n Ah, sí, hablemos.',
+		'show character n neutral_blush',
+		'x ¡Aaay! muchas gracias, ¿podemos ver de ser amigos?',
+		{
+			'Choice': {
+				'sip': {
+					'Text': 'Sí.',
+					'Do': 'jump amiguitos'
+				},
+				'noo': {
+					'Text': 'No...',
+					'Do': 'jump no_x'
+				}
+			}
+		}
+],
+	'Lev_ocupado': [
+		'stop music menu_theme with fadeOut 2s',
+		'stop music Scene001',
+		'play sound beep2',
+		'show character n speaking',
+		'n Ah, perdón, ya estoy ocupado.',
+		'show character n neutral',
+		'x Ouh, está bien, entiendo...'
+		'*La persona te cede el paso*'
+],
+	'Lev_sarcastico': [
+		'stop music menu_theme with fadeOut 2s',
+		'stop music Scene001',
+		'play sound beep2',
+		'show character n speaking',
+		'n ¿Te  preguntábas o preguntás?',
+		'show character n pff',
+		'x JAJAJA, me pregunto... te pregunto; ¿podemos ver de ser amigos?',
+		{
+			'Choice': {
+				'sip': {
+					'Text': 'Sí.',
+					'Do': 'jump amiguitos'
+				},
+				'noo': {
+					'Text': 'No...',
+					'Do': 'jump no_x'
+				}
+			}
+		}
 ],
 
 });
