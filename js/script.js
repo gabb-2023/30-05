@@ -892,7 +892,7 @@ monogatari.script ({
 		'show character n speaking',
 		'n Ah, perdón, ya estoy ocupado.',
 		'show character n neutral',
-		'x Ouh, está bien, entiendo...'
+		'x Ouh, está bien, entiendo...',
 		'*La persona te cede el paso*'
 ],
 	'Lev_sarcastico': [
