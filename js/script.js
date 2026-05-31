@@ -854,14 +854,32 @@ monogatari.script ({
 		'play sound beep2',
 		'n Ayy, muchas gracias.',
 		'l JAJJA, no es nada',
+          // ACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa
 ],
 
 	'Pasillo_02': [
 		'stop music menu_theme with fadeOut 2s',
 		'stop music Scene001',
 		'show scene Pasillos_02 with fadeIn',
+                'show character n neutral',
 		'x ...',
 		'*Una persona te mira, como si quisiera hablarte.*',
+		{
+			'Choice': {
+				'claro': {
+					'Text': 'Por supuesto',
+					'Do': 'jump x_y_Lev'
+				},
+				'no': {
+					'Text': 'Estoy ocupado',
+					'Do': 'jump Lev_ocupado'
+				},
+				'broma': {
+					'Text': '¿Preguntábas?',
+					'Do': 'jump Lev_sarcastico'
+				}
+			}
+		}
 ],
 
 	'x_y_Lev': [
@@ -915,6 +933,26 @@ monogatari.script ({
 				}
 			}
 		}
+],
+
+	'amiguitos': [
+		'stop music menu_theme with fadeOut 2s',
+		'stop music Scene001',
+		'play sound beep2',
+		'show character n speaking',
+		'n Por supuesto',
+		'show character n neutral_blush',
+		'x Gracias, que bueno esto...',
+],
+
+	'no_x': [
+		'stop music menu_theme with fadeOut 2s',
+		'stop music Scene001',
+		'play sound beep2',
+		'show character n speaking',
+		'n Mmmmh, no... nos conocemos bien',
+		'show character n neutral',
+		'x Ah, eh... sí tenés la razón',
 ],
 
 });
