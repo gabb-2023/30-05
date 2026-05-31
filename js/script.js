@@ -791,7 +791,7 @@ monogatari.script ({
 		'show character n speaking_t2',
 		'play sound beep2',
 		'n Manuel.... ¿Qué hay de vos?',
-		'show character g speaking_t2',
+		'show character g smile_t2',
 		'l Leyla, de hecho...',
 ],
 
