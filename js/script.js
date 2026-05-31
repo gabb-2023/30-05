@@ -98,7 +98,7 @@ monogatari.characters ({
 		directory: 'portraits',
 		sprites: {
 
-		}
+		},
 	}
 	'ls': {
 		name: 'Lucas',
