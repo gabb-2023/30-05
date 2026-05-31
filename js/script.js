@@ -3,7 +3,7 @@ monogatari.assets ('music', {
 	'000': 'liminal.mp3',
 	'menu_theme': 'Main_primeraparte.mp3',
 	'Scene001': 'Scene001.mp3',
-        'Inicio': 'Partida01.mp3',
+				'Inicio': 'Partida01.mp3',
 });
 monogatari.assets ('scenes', {
 	'calma': 'Fondo01.jpg',
@@ -41,7 +41,7 @@ monogatari.characters ({
 			speaking: 'Gigi_speaking.png',
 			speaking_sinN: 'Gigi_speaking_sinNunu.png',
 			smile: 'Gigi_smile.png',
-                        // after (t2)
+												// after (t2)
 			blush_t2: 'Gigi_blush_after.png',
 			emocionado_t2: 'Gigi_emocionado_after.png',
 			emocionado_sinN_t2: 'Gigi_emocionado_sinNunu_after.png',
@@ -69,7 +69,7 @@ monogatari.characters ({
 			speaking: 'Nunu_speaking.png',
 			smile: 'Nunu_smile.png',
 			neutral_blush: 'Nunu_neutral_blush.png',
-                        // after (t2)
+												// after (t2)
 			emocionado_t2: 'Nunu_emocionado_after.png',
 			neutral_t2: 'Nunu_neutral_after.png',
 			neutral_blush_t2: 'Nunu_neutral_blush_after.png',
@@ -98,9 +98,9 @@ monogatari.characters ({
 		directory: 'portraits',
 		sprites: {
 
-		},
-	}
-	'a': {
+		}
+	},
+	'ls': {
 		name: 'Lucas',
 		color: '#FFFFFF',
 		directory: 'portraits',
@@ -197,7 +197,7 @@ monogatari.script ({
 		'play sound beep1',
 		'show character g speaking',
 		'g Exacto.',
-		
+
 		'jump Preguntas'
 	],
 
@@ -287,7 +287,7 @@ monogatari.script ({
 	],
 	'EscenaContinuar': [
 		'stop music menu_theme with fadeOut 2s',
-   'show character n neutral',
+	 'show character n neutral',
 	 'show character g speaking',
 		'play sound beep1',
 		'g Creo que ya lo notaste, pero de todos modos.',
@@ -442,7 +442,7 @@ monogatari.script ({
 				}
 			}
 		}
-		
+
 	],
 	'EscenaNext':[
 		'stop music menu_theme with fadeOut 2s',
@@ -534,7 +534,7 @@ monogatari.script ({
 		'show character g speaking',
 		'play sound beep1',
 		'g '
-		
+
 	],
 
 	'EscenaNoSpoiler':[
@@ -558,7 +558,7 @@ monogatari.script ({
 		'play music Scene001 with fadeIn',
 		'hide character n',
 		'show character g neutral_sinN with fadeIn',
-                'show character g speaking_sinN',
+								'show character g speaking_sinN',
 		'play sound beep1',
 		'g y por eso yo siempre... ',
 		'play sound beep1',
@@ -569,7 +569,7 @@ monogatari.script ({
 		'play sound beep2',
 		'show character n speaking',
 		'n Hola',
-	        'play sound beep1',
+					'play sound beep1',
 		'show character g speaking',
 		'show character n neutral',
 		'g ¡Holaa!.. ¿Estudiás también acá o... solo pasabas?',
@@ -646,7 +646,7 @@ monogatari.script ({
 		'show character g pff',
 		'play sound beep1',
 		'g Jajajaja',
-                'show character g smile',
+								'show character g smile',
 		'show character g speaking',
 		'play sound beep1',
 		'g Por cierto, me gusta tu nuevo corte de cabello',
@@ -654,15 +654,15 @@ monogatari.script ({
 		'play sound beep2',
 		'n Ah- gracias...',
 		'show character n smile',
-                'show character g smile',
+								'show character g smile',
 		'show character g speaking',
 		'play sound beep1',
 		'g Entonces... como estámos en un mismo colegio',
-                'show character g smile',
+								'show character g smile',
 		'show character g speaking',
 		'play sound beep1',
 		'g ¿Te parece y nos hablamos en el receso y así?',
-                'show character g smile',
+								'show character g smile',
 		{
 			'Choice': {
 				'recreos': {
@@ -731,7 +731,7 @@ monogatari.script ({
 			}
 		}
 	],
-	
+
 	'Escenanorecreos':[
 		'stop music menu_theme with fadeOut 2s',
 		'stop music Scene001',
@@ -823,7 +823,7 @@ monogatari.script ({
 		'stop music menu_theme with fadeOut 2s',
 		'stop music Scene001',
 		'show scene Pasillos_01',
-                'show character n neutral_blush',
+								'show character n neutral_blush',
 		'x Hola... te ví allá.',
 		'*Señala el pasillo anterior*.',
 		'Y... me preguntaba si podía hablarte...',
@@ -863,14 +863,14 @@ monogatari.script ({
 		'play sound beep2',
 		'n Ayy, muchas gracias.',
 		'l JAJJA, no es nada',
-          // ACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa
+					// ACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa
 ],
 
 	'Pasillo_02': [
 		'stop music menu_theme with fadeOut 2s',
 		'stop music Scene001',
 		'show scene Pasillos_02 with fadeIn',
-                'show character n neutral',
+								'show character n neutral',
 		'x ...',
 		'*Una persona te mira, como si quisiera hablarte.*',
 		{
@@ -894,7 +894,7 @@ monogatari.script ({
 	'x_y_Lev': [
 		'stop music menu_theme with fadeOut 2s',
 		'stop music Scene001',
-                'show character n neutral',
+								'show character n neutral',
 		'play sound beep2',
 		'show character n speaking',
 		'n Ah, sí, hablemos.',
@@ -965,7 +965,7 @@ monogatari.script ({
 		'n Por supuesto',
 		'show character n neutral_blush',
 		'x Gracias, que bueno esto...',
-		'a Oh, me llamo Lucas, ¿y vos?',
+		'ls Oh, me llamo Lucas, ¿y vos?',
 		'play sound beep2',
 		'show character n speaking',
 		'n Ah, Manuel.',
