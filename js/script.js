@@ -895,7 +895,7 @@ monogatari.script ({
 				},
 				'cruzar': {
 					'Text': 'Ir al pasillo',
-					'Do': 'jump Pasar'
+					'Do': 'jump Pasillo'
 				}
 			}
 		}
