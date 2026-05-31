@@ -100,7 +100,7 @@ monogatari.characters ({
 
 		},
 	}
-	'ls': {
+	'a': {
 		name: 'Lucas',
 		color: '#FFFFFF',
 		directory: 'portraits',
@@ -965,7 +965,7 @@ monogatari.script ({
 		'n Por supuesto',
 		'show character n neutral_blush',
 		'x Gracias, que bueno esto...',
-		'ls Oh, me llamo Lucas, ¿y vos?',
+		'a Oh, me llamo Lucas, ¿y vos?',
 		'play sound beep2',
 		'show character n speaking',
 		'n Ah, Manuel.',
