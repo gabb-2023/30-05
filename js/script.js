@@ -1011,7 +1011,7 @@ monogatari.script ({
 		'stop music menu_theme with fadeOut 2s',
 		'stop music Scene001',
     'show scene Pasillos_03 with fadeIn',
-		'show chracter n neutral_blush with fadeIn',
+		'show character n neutral_blush with fadeIn',
 		'*Gabriel te vé desde la ventana de su grado.*',
 		'*sale corriendo hacia vos.*',
 		'show character g emocionado',
