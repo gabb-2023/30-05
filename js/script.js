@@ -788,18 +788,70 @@ monogatari.script ({
 		'show scene Aula',
 		'show character n neutral_blush',
 		'x ¡Hola!, ¿cómo te llamás? Recién te ví en pasillo...',
-		'show character n speaking_t2',
+		'show character n speaking',
 		'play sound beep2',
 		'n Manuel.... ¿Qué hay de vos?',
-		'show character g smile_t2',
+		'show character n neutral_blush',
 		'l Leyla, de hecho...',
+		'show character n speaking',
+		'play sound beep2',
+		'n Oh...',
+		'show character n neutral_blush',
+		{
+			'Choice': {
+				'asiento': {
+					'Text': 'Sentarse',
+					'Do': 'jump Sentado_01'
+				},
+				'afuera': {
+					'Text': 'Salir afuera',
+					'Do': 'jump Pasillo_02'
+				}
+			}
+		}
 ],
 
 	'Pasillo': [
 		'stop music menu_theme with fadeOut 2s',
 		'stop music Scene001',
 		'show scene Pasillos_01',
-		'x .',
+		'x Hola... te ví allá.',
+		'*Señala el pasillo anterior*.',
+		'Y... me preguntaba si podía hablarte...',
+		{
+			'Choice': {
+				'claro': {
+					'Text': 'Por supuesto',
+					'Do': 'jump x_y_Lev'
+				},
+				'no': {
+					'Text': 'Estoy ocupado',
+					'Do': 'jump Lev_ocupado'
+				},
+				'broma': {
+					'Text': '¿Preguntábas?',
+					'Do': 'jump Lev_sarcastico'
+				}
+			}
+		}
+],
+
+	'Sentado_01': [
+		'stop music menu_theme with fadeOut 2s',
+		'stop music Scene001',
+		'show scene Aula_sentado',
+		'l ¿De dónde venís?',
+		'play sound beep2',
+		'n Emh, Asunción, CNAE ¿y vos, siempre estudiaste aquí?',
+		'l ¡Síp! Desde primer grado.',
+],
+
+	'Pasillo_02': [
+		'stop music menu_theme with fadeOut 2s',
+		'stop music Scene001',
+		'show scene Pasillos_02',
+		'x ...',
+		'*Una persona te mira, como si quisiera hablarte.*',
 ],
 
 });
