@@ -10,6 +10,7 @@ monogatari.assets ('scenes', {
 	'cuartapared': 'Fondo001.jpg',
 	'Pasillos_01': 'Pasillos_01.jpg',
 	'Pasillos_02': 'Pasillos_02.jpg',
+	'Pasillos_03': 'Pasillos_03.jpg',
 	'Aula': 'Aula.jpg',
 	'Aula_sentado': 'Aula_sentado.jpg',
 });
@@ -863,6 +864,15 @@ monogatari.script ({
 		'play sound beep2',
 		'n Ayy, muchas gracias.',
 		'l JAJJA, no es nada',
+		'play sound beep2',
+		'n hmm, JAJAJ',
+		'l Te ví con alguien en el pasillo, hmmm',
+		'l ¿Ya lo conocés o estábas socializando?',
+		'l Es que... te noto como callado',
+		'play sound beep2',
+		'n Ah, sí... lo conozco desde hace tiempo.',
+		'play sound beep2',
+		'n JAJAJ, sólo soy un poco callado al principio...',
 					// ACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa
 ],
 
@@ -997,5 +1007,29 @@ monogatari.script ({
 			}
 		}
 ],
+	'nuevolugar': [
+		'stop music menu_theme with fadeOut 2s',
+		'stop music Scene001',
+    'show scene Pasillos_03 with fadeIn',
+		'show n neutral_blush with fadeIn',
+		'*Gabriel te vé desde la ventana de su grado.*',
+		'*sale corriendo hacia vos.*',
+		'show character g emocionado',
+		'play sound beep1',
+		'g ¡Nunu!',
+		'show character g emocionado',
+		'play sound beep1',
+		'g Holiii, otra vez, ¿qué hacés por acá?'
+	],
 
+	'aula':[
+		'stop music menu_theme with fadeOut 2s',
+		'stop music Scene001',
+		'show scene Aula with fadeIn',
+		'show n neutral_blush with fadeIn',
+		'*Leyla observa desde su asiento, sonriendote.*',
+		'show scene Aula_sentado with fadeIn',
+		'l ¡Hola! De nuevo, ¿qué tal?',
+	]
+	
 });
